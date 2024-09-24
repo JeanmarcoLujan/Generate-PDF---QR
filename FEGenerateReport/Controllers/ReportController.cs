@@ -91,13 +91,13 @@ namespace FEGenerateReport.Controllers
                             NameValuePairs2 logonProps2 = reportDocument.DataSourceConnections[index].LogonProperties;
                             logonProps2.Set("Provider", "B1CRHProxy");
                             logonProps2.Set("Server Type", "B1CRHProxy");
-                            logonProps2.Set("Connection String", "DRIVER={B1CRHProxy};SERVERNODE=saphaargendemo:30015;DATABASE=LOCALIZACION_RDR"); // ConfigurationManager.AppSettings["ConnectionStr"].ToString());
+                            logonProps2.Set("Connection String", "DRIVER={B1CRHProxy};SERVERNODE=10.140.205.203:30015;DATABASE=TEST_AFOODS_20240913"); // ConfigurationManager.AppSettings["ConnectionStr"].ToString());
                                                                                                                                                    //logonProps2.Set("Locale Identifier", "1033");
 
                             reportDocument.DataSourceConnections[index].SetLogonProperties(logonProps2);
 
                             //reportDocument.DataSourceConnections[index].SetConnection(ConfigurationManager.AppSettings["sServerHana"].ToString(), ConfigurationManager.AppSettings["sCompanyName"].ToString(), ConfigurationManager.AppSettings["sUserBD"].ToString(), ConfigurationManager.AppSettings["sPassBD"].ToString());
-                            reportDocument.DataSourceConnections[index].SetConnection("saphaargendemo:30015", "LOCALIZACION_RDR", "B1ADMIN", "7SkyOne*YjllM2ZkYz");
+                            reportDocument.DataSourceConnections[index].SetConnection("10.140.205.203:30015", "TEST_AFOODS_20240913", "B1ADMIN", "@rgentisB1");
                             checked { ++index; }
                         }
 
